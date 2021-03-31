@@ -3,8 +3,12 @@
 function getPage(){
 
     $lesPages['accueil'] = "accueilControleur";
-    $lesPages['contact'] = "contactControleur";
-
+    $lesPages['mentions'] = "mentionsControleur";
+    $lesPages['actualite'] = "actuControleur";
+    $lesPages['projet'] = "projetControleur";
+    $lesPages['voirMess'] = "voirMessControleur";
+    $lesPages['creerActu'] = "creerActuControleur";
+    $lesPages['cv'] = "cvControleur";
     if (isset($_GET['page'])){
         $page = $_GET['page'];
     }

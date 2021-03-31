@@ -1,7 +1,37 @@
 {% extends "base.html.twig" %}
-{% block title %} {{ parent() }} Page d'accueil{% endblock %}
+{% block title %} {{ parent() }}Page d'accueil{% endblock %}
 {% block contenu %}
 {{ parent() }}
 
+
+<div class="container-fluid">
+  <form class="form" action="index.php?page=contact" method="post" enctype="application/x-www-formurlencoded">
+    <h2>Vous désirez me contacter ? Remplissez ce formulaire, je vous recontacterai sous peu !</h2>
+
+    <label for="inputName" class="sr-only">Votre nom</label>
+      <input type="text" id="nom" name="nom" class="form-control" placeholder="Votre nom" required autofocus>
+    
+    <label for="inputFirstname" class="sr-only">Votre prénom</label>
+      <input type="text" id="prenom" name="prenom" class="form-control" placeholder="Votre prénom" required autofocus>
+
+    <label for="inputEmail" class="sr-only">Votre E-mail</label>
+      <input type="email" id="email" name="email" class="form-control" placeholder="Votre adresse mail" required autofocus>
+    
+    <label for="inputText" class="sr-only"></label>
+        <textArea type="textArea" id="texte" name="texte" class="form-control" placeholder="Contenu" required></textArea>      
+    
+    <button class="btn btn-lg btn-primary btn-block" type="submit" name="btSubmit" style="">Envoyer</button>
+  </form>
+</div>
+
+
+<footer class="bg-dark text-center text-white">  
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: #f3b572; ">
+    © 2021 Tous droits réservés : 
+    <a class="text-white" href="index.php">BECQUAERT Rémi</a>
+  </div>
+  <!-- Copyright -->
+</footer>
 
 {% endblock %}

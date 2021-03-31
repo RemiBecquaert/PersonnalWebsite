@@ -1,9 +1,7 @@
 <?php
 
-function mentionsControleur(){
-
-    echo 'Mentions légales';
-
+function mentionsControleur($twig){
+    echo $twig->render('mentions.html.twig', array());
 }
 
 ?>
